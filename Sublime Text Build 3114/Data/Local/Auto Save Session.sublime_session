@@ -150,246 +150,6 @@
 			"buffers":
 			[
 				{
-					"file": "/C/Users/lff3/Desktop/New folder/IA-projeto2/problem-v3.pddl",
-					"settings":
-					{
-						"buffer_size": 723,
-						"line_ending": "Windows"
-					}
-				},
-				{
-					"contents": "(define (problem multimodal_1)\n  (:domain multimodal)\n  (:objects \n\n\n\n  \t\t)\n\n  (:init \n  \t (adj sq-1-1 sq-1-2) (adj sq-1-2 sq-1-1)\n\t (adj sq-1-2 sq-1-3) (adj sq-1-3 sq-1-2)\n\t (adj sq-2-1 sq-2-2) (adj sq-2-2 sq-2-1)\n\t (adj sq-2-2 sq-2-3) (adj sq-2-3 sq-2-2)\n\t (adj sq-1-1 sq-2-1) (adj sq-2-1 sq-1-1)\n\t (adj sq-1-2 sq-2-2) (adj sq-2-2 sq-1-2)\n\t (adj sq-1-3 sq-2-3) (adj sq-2-3 sq-1-3)\n\t \n\t (pit sq-1-2)\n\n\t (is-gold the-gold)\n\t (at the-gold sq-1-3)\n\t (is-agent agent)\n\t (at agent sq-1-1)\n\t (is-arrow the-arrow)\n\t (have agent the-arrow)\n\t (is-wumpus wumpus)\n\t (at wumpus sq-2-3)\n\t (wumpus-in sq-2-3))\n  \n  (:goal (and (have agent the-gold) (at agent sq-1-1)))\n  )",
-					"settings":
-					{
-						"buffer_size": 659,
-						"line_ending": "Windows"
-					}
-				}
-			],
-			"build_system": "",
-			"build_system_choices":
-			[
-			],
-			"build_varint": "",
-			"command_palette":
-			{
-				"height": 81.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 432.0
-			},
-			"console":
-			{
-				"height": 0.0,
-				"history":
-				[
-				]
-			},
-			"distraction_free":
-			{
-				"menu_visible": true,
-				"show_minimap": false,
-				"show_open_files": false,
-				"show_tabs": false,
-				"side_bar_visible": false,
-				"status_bar_visible": false
-			},
-			"file_history":
-			[
-				"/C/Users/lff3/Desktop/New folder/IA-projeto2/domain-v1.pddl"
-			],
-			"find":
-			{
-				"height": 0.0
-			},
-			"find_in_files":
-			{
-				"height": 0.0,
-				"where_history":
-				[
-				]
-			},
-			"find_state":
-			{
-				"case_sensitive": false,
-				"find_history":
-				[
-				],
-				"highlight": true,
-				"in_selection": false,
-				"preserve_case": false,
-				"regex": false,
-				"replace_history":
-				[
-				],
-				"reverse": false,
-				"show_context": true,
-				"use_buffer2": true,
-				"whole_word": false,
-				"wrap": true
-			},
-			"groups":
-			[
-				{
-					"selected": 1,
-					"sheets":
-					[
-						{
-							"buffer": 0,
-							"file": "/C/Users/lff3/Desktop/New folder/IA-projeto2/problem-v3.pddl",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 723,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										722,
-										0
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/myPDDL/syntax/pddl.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 1,
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 659,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										599,
-										599
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/myPDDL/syntax/pddl.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 0,
-							"type": "text"
-						}
-					]
-				}
-			],
-			"incremental_find":
-			{
-				"height": 0.0
-			},
-			"input":
-			{
-				"height": 0.0
-			},
-			"layout":
-			{
-				"cells":
-				[
-					[
-						0,
-						0,
-						1,
-						1
-					]
-				],
-				"cols":
-				[
-					0.0,
-					1.0
-				],
-				"rows":
-				[
-					0.0,
-					1.0
-				]
-			},
-			"menu_visible": true,
-			"output.find_results":
-			{
-				"height": 0.0
-			},
-			"pinned_build_system": "",
-			"position": "0,0,1,-1,-1,-1,-1,644,470,106,1126",
-			"project": "",
-			"replace":
-			{
-				"height": 0.0
-			},
-			"save_all_on_build": true,
-			"select_file":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"select_project":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"select_symbol":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"selected_group": 0,
-			"settings":
-			{
-			},
-			"show_minimap": true,
-			"show_open_files": false,
-			"show_tabs": true,
-			"side_bar_visible": true,
-			"side_bar_width": 150.0,
-			"status_bar_visible": true,
-			"template_settings":
-			{
-			},
-			"window_id": 3,
-			"workspace_name": ""
-		},
-		{
-			"auto_complete":
-			{
-				"selected_items":
-				[
-				]
-			},
-			"buffers":
-			[
-				{
 					"file": "/C/Users/lff3/Desktop/New folder/IA-projeto2/domain-v3.pddl",
 					"settings":
 					{
@@ -499,8 +259,8 @@
 								"selection":
 								[
 									[
-										0,
-										0
+										492,
+										492
 									]
 								],
 								"settings":
@@ -510,7 +270,7 @@
 									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
-								"translation.y": 966.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
@@ -585,7 +345,7 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,1,-1,-1,-1,-1,588,50,50,706",
+			"position": "0,2,3,-32000,-32000,-1,-1,588,50,50,706",
 			"project": "",
 			"replace":
 			{
@@ -633,6 +393,272 @@
 			{
 			},
 			"window_id": 1,
+			"workspace_name": ""
+		},
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"bi",
+						"bike_alfandega"
+					],
+					[
+						"agent_",
+						"agent_maria"
+					],
+					[
+						"agent",
+						"agent_jose"
+					],
+					[
+						"B",
+						"bike_praca_diario"
+					],
+					[
+						"p_",
+						"p_banco_brasil"
+					],
+					[
+						"ag",
+						"agent_joao"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/C/Users/lff3/Desktop/New folder/IA-projeto2/problem-v3.pddl",
+					"settings":
+					{
+						"buffer_size": 723,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/Users/lff3/Desktop/New folder/IA-projeto2/problem-multimodal.pddl",
+					"settings":
+					{
+						"buffer_size": 1302,
+						"encoding": "UTF-8",
+						"line_ending": "Windows"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 81.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 432.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/C/Users/lff3/Desktop/New folder/IA-projeto2/domain-v1.pddl"
+			],
+			"find":
+			{
+				"height": 0.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 1,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/C/Users/lff3/Desktop/New folder/IA-projeto2/problem-v3.pddl",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 723,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										699,
+										716
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/myPDDL/syntax/pddl.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/C/Users/lff3/Desktop/New folder/IA-projeto2/problem-multimodal.pddl",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1302,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1238,
+										1238
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/myPDDL/syntax/pddl.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 552.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,0,1,-1,-1,-1,-1,850,790,4,1591",
+			"project": "",
+			"replace":
+			{
+				"height": 0.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 3,
 			"workspace_name": ""
 		}
 	],
