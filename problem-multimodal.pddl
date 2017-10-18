@@ -23,7 +23,6 @@
     bike6
     bike7
     bike8
-    
   	 )
 
   (:init 
@@ -46,12 +45,14 @@
 	 (at agent_jose bike_cais_apolo)
 	 (is-agent_3 agent_maria)
 	 (at agent_maria bike_alfandega)
+
    (is_estacao bike_praca_republica)
    (is_estacao bike_alfandega)
    (is_estacao bike_praca_diario)
    (is_estacao bike_santa_rita)
    (is_estacao bike_mercado_sj)
    (is_estacao bike_cais_apolo)
+
    (is-ponto_turistico p_banco_brasil)
    (is-ponto_turistico p_paco_alfandega)
    (is-ponto_turistico p_praca_republica)
@@ -78,5 +79,29 @@
 	 
 	 )
   
-  (:goal (and (have agent the-gold) (at agent sq-1-1)))
+  (:goal 
+    (and
+      (and 
+        (visitou agent_joao p_banco_brasil) 
+        (visitou agent_joao p_paco_alfandega)
+        (visitou agent_joao p_praca_republica)
+        (visitou agent_joao p_igreja_nsrp) 
+        (visitou agent_joao p_mercado_sj)
+      )
+      (and 
+        (visitou agent_maria p_banco_brasil) 
+        (visitou agent_maria p_paco_alfandega)
+        (visitou agent_maria p_praca_republica)
+        (visitou agent_maria p_igreja_nsrp) 
+        (visitou agent_maria p_mercado_sj)
+      )
+      (and 
+        (visitou agent_jose p_banco_brasil) 
+        (visitou agent_jose p_paco_alfandega)
+        (visitou agent_jose p_praca_republica)
+        (visitou agent_jose p_igreja_nsrp) 
+        (visitou agent_jose p_mercado_sj)
+      )
+    )
   )
+)
