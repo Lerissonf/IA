@@ -1,0 +1,23 @@
+decrição
+
+Objects:
+	Station: bike_cais_apolo, bike_praca_republica, bike_alfandega, bike_santa_rita, bike_mercado_sj, bike_praca_diario 
+	Agents: agent_joao, agent_jose, agent_maria
+	Point Turistic: p_banco_brasil, p_paco_alfandega, p_mercado_sj, p_igreja_nsrp, p_praca_republica	
+	Bike: bike1, bike2, bike3, bike4, bike5, bike6, bike7, bike8
+
+Predicates:
+	at(what, square) 
+	adj(square-1, square-2)
+	have(who, what)
+	is-agent(who)
+	is-agent-blocked(who)
+	by-foot(who)
+	is-estacao(square)
+	is-ponto-turistico(square)
+	is-bike(which)
+	visited (who, square)
+	have-bike(who, which)
+	have-estacao-bike(square, which)
+
+Initial state:
