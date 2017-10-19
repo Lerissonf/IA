@@ -8,6 +8,8 @@
   	bike_mercado_sj
   	bike_praca_diario
   	agent_joao
+    agent_jose
+    agent_maria
     p_banco_brasil
   	p_paco_alfandega
   	p_mercado_sj
@@ -31,6 +33,10 @@
 
 	 (is-agent agent_joao)
 	 (at agent_joao bike_praca_diario)
+   (is-agent agent_jose)
+   (at agent_jose bike_cais_apolo)
+   (is-agent agent_maria)
+   (at agent_maria bike_alfandega)
 
    (is-estacao bike_praca_republica)
    (is-estacao bike_alfandega)
@@ -49,11 +55,27 @@
   
   (:goal 
     (and
-      (visited agent_joao p_banco_brasil)
-      (visited agent_joao p_paco_alfandega)
-      (visited agent_joao p_praca_republica)
-      (visited agent_joao p_igreja_nsrp) 
-      (visited agent_joao p_mercado_sj) 
+      (and 
+        (visited agent_joao p_banco_brasil) 
+        (visited agent_joao p_paco_alfandega)
+        (visited agent_joao p_praca_republica)
+        (visited agent_joao p_igreja_nsrp) 
+        (visited agent_joao p_mercado_sj)
+      )
+      (and 
+        (visited agent_maria p_banco_brasil) 
+        (visited agent_maria p_paco_alfandega)
+        (visited agent_maria p_praca_republica)
+        (visited agent_maria p_igreja_nsrp) 
+        (visited agent_maria p_mercado_sj)
+      )
+      (and 
+        (visited agent_jose p_banco_brasil) 
+        (visited agent_jose p_paco_alfandega)
+        (visited agent_jose p_praca_republica)
+        (visited agent_jose p_igreja_nsrp) 
+        (visited agent_jose p_mercado_sj)
+      )
     )
   )
 )
