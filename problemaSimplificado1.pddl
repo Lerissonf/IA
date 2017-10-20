@@ -1,20 +1,20 @@
 (define (problem multimodal_1)
   (:domain multimodal)
   (:objects
-  	bike_cais_apolo
-  	bike_praca_republica
-  	bike_alfandega
-  	bike_santa_rita
-  	bike_mercado_sj
-  	bike_praca_diario
-  	agent_joao
+    bike_cais_apolo
+    bike_praca_republica
+    bike_alfandega
+    bike_santa_rita
+    bike_mercado_sj
+    bike_praca_diario
+    agent_joao
     agent_jose
     agent_maria
     p_banco_brasil
-  	p_paco_alfandega
-  	p_mercado_sj
-  	p_igreja_nsrp
-  	p_praca_republica
+    p_paco_alfandega
+    p_mercado_sj
+    p_igreja_nsrp
+    p_praca_republica
     bike1
     bike2
     bike3
@@ -27,15 +27,15 @@
 
   (:init 
    (adj bike_cais_apolo bike_praca_republica) (adj bike_praca_republica bike_cais_apolo)
-	 (adj bike_cais_apolo bike_alfandega) (adj bike_alfandega bike_cais_apolo)
-	 (adj bike_alfandega bike_santa_rita) (adj bike_santa_rita bike_alfandega)
-	 (adj bike_santa_rita bike_mercado_sj) (adj bike_mercado_sj bike_santa_rita)
-	 (adj bike_mercado_sj bike_praca_diario ) (adj bike_praca_diario bike_mercado_sj)
-	 (adj bike_santa_rita bike_praca_diario) (adj bike_praca_diario bike_santa_rita)
+   (adj bike_cais_apolo bike_alfandega) (adj bike_alfandega bike_cais_apolo)
+   (adj bike_alfandega bike_santa_rita) (adj bike_santa_rita bike_alfandega)
+   (adj bike_santa_rita bike_mercado_sj) (adj bike_mercado_sj bike_santa_rita)
+   (adj bike_mercado_sj bike_praca_diario ) (adj bike_praca_diario bike_mercado_sj)
+   (adj bike_santa_rita bike_praca_diario) (adj bike_praca_diario bike_santa_rita)
    (adj bike_praca_diario bike_praca_republica) (adj bike_praca_republica bike_praca_diario)
-	 (adj bike_cais_apolo p_banco_brasil) (adj p_banco_brasil bike_cais_apolo)
+   (adj bike_cais_apolo p_banco_brasil) (adj p_banco_brasil bike_cais_apolo)
    (adj bike_alfandega p_paco_alfandega) (adj p_paco_alfandega bike_alfandega)
-	 (adj bike_mercado_sj p_mercado_sj) (adj p_mercado_sj bike_mercado_sj)
+   (adj bike_mercado_sj p_mercado_sj) (adj p_mercado_sj bike_mercado_sj)
    (adj bike_praca_diario p_igreja_nsrp) (adj p_igreja_nsrp bike_praca_diario)
    (adj bike_praca_republica p_praca_republica) (adj p_praca_republica bike_praca_republica)
 
@@ -48,8 +48,8 @@
    (is-bike bike7)
    (is-bike bike8) 
 
-	 (is-agent agent_joao)
-	 (at agent_joao bike_praca_diario)
+   (is-agent agent_joao)
+   (at agent_joao bike_praca_diario)
    (by-foot agent_joao)
    (not(is-agent-blocked agent_joao))
    (not(have-bike agent_joao bike1))
@@ -60,6 +60,11 @@
    (not(have-bike agent_joao bike6))
    (not(have-bike agent_joao bike7))
    (not(have-bike agent_joao bike8))
+   (not(visited agent_joao p_banco_brasil)) 
+   (not(visited agent_joao p_paco_alfandega))
+   (not(visited agent_joao p_praca_republica))
+   (not(visited agent_joao p_igreja_nsrp)) 
+   (not(visited agent_joao p_mercado_sj))
 
    (is-agent agent_jose)
    (at agent_jose bike_cais_apolo)
@@ -73,6 +78,12 @@
    (not(have-bike agent_jose bike6))
    (not(have-bike agent_jose bike7))
    (not(have-bike agent_jose bike8))
+   (not(visited agent_jose p_banco_brasil)) 
+   (not(visited agent_jose p_paco_alfandega))
+   (not(visited agent_jose p_praca_republica))
+   (not(visited agent_jose p_igreja_nsrp)) 
+   (not(visited agent_jose p_mercado_sj))
+
 
    (is-agent agent_maria)
    (at agent_maria bike_alfandega)
@@ -86,6 +97,12 @@
    (not(have-bike agent_maria bike6))
    (not(have-bike agent_maria bike7))
    (not(have-bike agent_maria bike8))
+   (not(visited agent_maria p_banco_brasil)) 
+   (not(visited agent_maria p_paco_alfandega))
+   (not(visited agent_maria p_praca_republica))
+   (not(visited agent_maria p_igreja_nsrp)) 
+   (not(visited agent_maria p_mercado_sj))
+
 
    (is-estacao bike_alfandega)
    (is-estacao bike_praca_diario)
@@ -107,16 +124,16 @@
    (is-ponto-turistico p_praca_republica)
    (is-ponto-turistico p_igreja_nsrp)
    (is-ponto-turistico p_mercado_sj)
-	 
-	 )
+   
+   )
   
   (:goal 
     (and 
-      (visited agent_joao p_banco_brasil) 
-      (visited agent_joao p_paco_alfandega)
-      (visited agent_joao p_praca_republica)
-      (visited agent_joao p_igreja_nsrp) 
-      (visited agent_joao p_mercado_sj)
+        (visited agent_maria p_banco_brasil) 
+        (visited agent_maria p_paco_alfandega)
+        (visited agent_maria p_praca_republica)
+        (visited agent_maria p_igreja_nsrp) 
+        (visited agent_maria p_mercado_sj)
     )
   )
 )

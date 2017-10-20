@@ -1,4 +1,4 @@
-decrição
+Descrição
 
 Objects:
 	Station: bike_cais_apolo, bike_praca_republica, bike_alfandega, bike_santa_rita, bike_mercado_sj, bike_praca_diario 
@@ -7,17 +7,187 @@ Objects:
 	Bike: bike1, bike2, bike3, bike4, bike5, bike6, bike7, bike8
 
 Predicates:
-	at(what, square) 
-	adj(square-1, square-2)
-	have(who, what)
-	is-agent(who)
-	is-agent-blocked(who)
-	by-foot(who)
-	is-estacao(square)
-	is-ponto-turistico(square)
-	is-bike(which)
-	visited (who, square)
-	have-bike(who, which)
-	have-estacao-bike(square, which)
+	at(what, square) - True if what you are in a place.
+	adj(square-1, square-2) - True if a place is adjacent to another place.
+	have(who, what) - True if the "who"(agent) has what.
+	is-agent(who) - True if "who" is an agent.
+	is-agent-blocked(who) - True if the "who"(agent) is locked.
+	by-foot(who) - True if the "who"(agent) is on foot.
+	is-estacao(square) - True if the place is a station.
+	is-ponto-turistico(square) - true if the place is a tourist spot.
+	is-bike(which) - True if 'which" is a bike. 
+	visited (who, square) - True if "who"(agent) visited the place.
+	have-bike(who, which) - True if the "who"(agent) is on a bike.
+	have-estacao-bike(square, which) - True if the Bike station has at least one Bike.
 
 Initial state:
+   adj(bike_cais_apolo, bike_praca_republica),
+   adj(bike_praca_republica, bike_cais_apolo),
+   adj(bike_cais_apolo, bike_alfandega), 
+   adj(bike_alfandega, bike_cais_apolo),
+   adj(bike_alfandega, bike_santa_rita), 
+   adj(bike_santa_rita, bike_alfandega),
+   adj(bike_santa_rita, bike_mercado_sj), 
+   adj(bike_mercado_sj, bike_santa_rita),
+   adj(bike_mercado_sj, bike_praca_diario), 
+   adj(bike_praca_diario, bike_mercado_sj),
+   adj(bike_santa_rita, bike_praca_diario), 
+   adj(bike_praca_diario, bike_santa_rita),
+   adj(bike_praca_diario, bike_praca_republica), 
+   adj(bike_praca_republica, bike_praca_diario),
+   adj(bike_cais_apolo, p_banco_brasil), 
+   adj(p_banco_brasil, bike_cais_apolo),
+   adj(bike_alfandega, p_paco_alfandega), 
+   adj(p_paco_alfandega, bike_alfandega),
+   adj(bike_mercado_sj, p_mercado_sj), 
+   adj(p_mercado_sj, bike_mercado_sj),
+   adj(bike_praca_diario, p_igreja_nsrp), 
+   adj(p_igreja_nsrp, bike_praca_diario),
+   adj(bike_praca_republica, p_praca_republica), 
+   adj(p_praca_republica, bike_praca_republica) are True.
+
+   is-bike(bike1),
+   is-bike(bike2),
+   is-bike(bike3),
+   is-bike(bike4),
+   is-bike(bike5),
+   is-bike(bike6),
+   is-bike(bike7),
+   is-bike(bike8) are True. 
+
+   is-agent(agent_joao), 
+   is-agent(agent_jose), 
+   is-agent(agent_maria) are True.
+
+   by-foot(agent_joao),
+   by-foot(agent_jose),
+   by-foot(agent_maria) are True.
+
+   at(agent_joao, bike_praca_diario),
+   at(agent_jose, bike_cais_apolo),
+   at(agent_maria, bike_alfandega) are True.
+
+   is-agent-blocked(agent_joao),
+   is-agent-blocked(agent_jose),
+   is-agent-blocked(agent_maria) are False.
+
+   have-bike(agent_joao bike1),
+   have-bike(agent_joao bike2),
+   have-bike(agent_joao bike3),
+   have-bike(agent_joao bike4),
+   have-bike(agent_joao bike5),
+   have-bike(agent_joao bike6),
+   have-bike(agent_joao bike7),
+   have-bike(agent_joao bike8),
+   have-bike(agent_jose bike1),
+   have-bike(agent_jose bike2),
+   have-bike(agent_jose bike3),
+   have-bike(agent_jose bike4),
+   have-bike(agent_jose bike5),
+   have-bike(agent_jose bike6),
+   have-bike(agent_jose bike7),
+   have-bike(agent_jose bike8),
+   have-bike(agent_maria bike1),
+   have-bike(agent_maria bike2),
+   have-bike(agent_maria bike3),
+   have-bike(agent_maria bike4),
+   have-bike(agent_maria bike5),
+   have-bike(agent_maria bike6),
+   have-bike(agent_maria bike7),
+   have-bike(agent_maria bike8) are False.
+
+   visited(agent_joao, p_banco_brasil),
+   visited(agent_joao, p_paco_alfandega),
+   visited(agent_joao, p_praca_republica),
+   visited(agent_joao, p_igreja_nsrp),
+   visited(agent_joao, p_mercado_sj),
+   visited(agent_jose, p_banco_brasil),
+   visited(agent_jose, p_paco_alfandega),
+   visited(agent_jose, p_praca_republica),
+   visited(agent_jose, p_igreja_nsrp),
+   visited(agent_jose, p_mercado_sj),
+   visited(agent_maria, p_banco_brasil),
+   visited(agent_maria, p_paco_alfandega),
+   visited(agent_maria, p_praca_republica),
+   visited(agent_maria, p_igreja_nsrp),
+   visited(agent_maria, p_mercado_sj) are False.
+
+   is-ponto-turistico(p_banco_brasil),
+   is-ponto-turistico(p_paco_alfandega),
+   is-ponto-turistico(p_praca_republica),
+   is-ponto-turistico(p_igreja_nsrp),
+   is-ponto-turistico(p_mercado_sj) are True.
+
+   is-estacao(bike_alfandega),
+   is-estacao(bike_praca_diario),
+   is-estacao(bike_mercado_sj),
+   is-estacao(bike_santa_rita),
+   is-estacao(bike_cais_apolo),
+   is-estacao(bike_praca_republica) are True.
+
+   have-estacao-bike(bike_praca_diario, bike1),
+   have-estacao-bike(bike_mercado_sj, bike2),
+   have-estacao-bike(bike_mercado_sj, bike3),
+   have-estacao-bike(bike_santa_rita, bike4),
+   have-estacao-bike(bike_santa_rita, bike5),
+   have-estacao-bike(bike_santa_rita, bike6),
+   have-estacao-bike(bike_cais_apolo, bike7),
+   have-estacao-bike(bike_praca_republica, bike8) are True.
+
+Goal speciﬁcation:
+   visited(agent_joao, p_banco_brasil),
+   visited(agent_joao, p_paco_alfandega),
+   visited(agent_joao, p_praca_republica),
+   visited(agent_joao, p_igreja_nsrp),
+   visited(agent_joao, p_mercado_sj),
+   visited(agent_jose, p_banco_brasil),
+   visited(agent_jose, p_paco_alfandega),
+   visited(agent_jose, p_praca_republica),
+   visited(agent_jose, p_igreja_nsrp),
+   visited(agent_jose, p_mercado_sj),
+   visited(agent_maria, p_banco_brasil),
+   visited(agent_maria, p_paco_alfandega),
+   visited(agent_maria, p_praca_republica),
+   visited(agent_maria, p_igreja_nsrp),
+   visited(agent_maria, p_mercado_sj) must be True.
+   Everything else we don’t care about.
+
+Action/Operator: caminhar
+	Description:
+	Precondition:
+	Effect:
+	Explicação em português:  A ação caminhar recebe como parâmetro um agente, o lugar em que ele se encontra e o lugar que ele pretende ir. Como pré condição deseja-se que o parâmetro who seja um agente e que ele não esteja bloqueado. Além disso, que o mesmo esteja a pé e no local selecionado, de tal forma que os dois lugares sejam adjacentes. De tal forma que o lugar que ele etá seja um ponto turistico ou o que ele quer ir seja uma estação ou o inverso. Como efeito espera-se que o agente não estaja no lugar que ele começou e por conseguinte ele estará no lugar que quer ir.
+
+Action/Operator: pedalar
+	Description:
+	Precondition:
+	Effect:
+	Explicação em português:  A ação de pedalar recebe como parâmetro um "alguém", uma coisa, o lugar onde ele estar e o lugar onde ele quer ir. Como pré condição deseja-se que o parâmetro who seja um agente e que ele não esteja bloqueado. Além disso, que a  a coisa seja uma bike e esse agente à possua e que  por conseguite ele não esteja a pé, esteja no local selecionado, de tal forma que os dois lugares sejam adjacentes, e o lugar onde se encontra seja uma estação e o lugar de destino também. Com isso o lugar o qual está não possui a bike que o mesmo tem. Como efeito ele não estará no lugar que ele começou e estará no lugar que quer ir e o agente estará bloqueado para andar.  
+
+Action/Operator: esperar5min
+	Description:
+	Precondition:
+	Effect:
+	Explicação em português:  A ação de pedalar recebe como parâmetro um "alguém" e um lugar.
+	Como pré condição deseja-se que o parâmetro alguém seja um agente e que ele esteja bloqueado para andar e a pé. Além disso, que ele esteja no lugar. Como efeito o agente não estará bloqueado para andar 
+
+Action/Operator: visitar-ponto
+	Description:
+	Precondition:
+	Effect:
+	Explicação em português: A ação de visitar-ponto recebe como parâmetro um "alguém" e um lugar.
+	Como pré condição deseja-se que o parâmetro alguém seja um agente e ele esteja no lugar. Além disso, que esteja a pé e o lugar seja um ponto turístico de tal forma que ele ainda não tenha visitado esse lugar. Como efeito o agente visitou o lugar.  
+
+Action/Operator: pegar-bicicleta
+	Description:
+	Precondition:
+	Effect:
+	Explicação em português: A ação de pegar-bicicleta recebe como parâmetro um "alguém", uma coisa e um lugar. Como pré condição deseja-se que o alguém seja um agente que esteja no referido lugar e a pé, que não se encontre bloqueado pra andar. Além disso, que a referida coisa seja uma bike e o lugar uma estação a qual a mesma tenha pelo menos uma bike, e o agente não tem bike. Como efeito
+ 	a estação não terá mais a referida bike, o agente terá a bike e o mesmo não estará mais a pé.  
+
+Action/Operator: entregar-bicicleta
+	Description:
+	Precondition:
+	Effect:
+	Explicação em português: A ação de pegar-bicicleta recebe como parâmetro um "alguém", uma coisa e um lugar. Como pré condição deseja-se que o alguém seja um agente, esteja no referido local e não esteja a pé. Além disso, não se encontre bloqueado pra andar. De maneira que a referida coisa seja uma bike, e o lugar seja uma estação. Tal estação não possua a referida bike e o agente à possua.
+  	Como efeito deseja-se que o agente não tenha a bike e a estação à tenha. Além disso o agente também fique a pé. 

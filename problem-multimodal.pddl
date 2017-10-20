@@ -60,6 +60,11 @@
    (not(have-bike agent_joao bike6))
    (not(have-bike agent_joao bike7))
    (not(have-bike agent_joao bike8))
+   (not(visited agent_joao p_banco_brasil)) 
+   (not(visited agent_joao p_paco_alfandega))
+   (not(visited agent_joao p_praca_republica))
+   (not(visited agent_joao p_igreja_nsrp)) 
+   (not(visited agent_joao p_mercado_sj))
 
    (is-agent agent_jose)
    (at agent_jose bike_cais_apolo)
@@ -73,6 +78,12 @@
    (not(have-bike agent_jose bike6))
    (not(have-bike agent_jose bike7))
    (not(have-bike agent_jose bike8))
+   (not(visited agent_jose p_banco_brasil)) 
+   (not(visited agent_jose p_paco_alfandega))
+   (not(visited agent_jose p_praca_republica))
+   (not(visited agent_jose p_igreja_nsrp)) 
+   (not(visited agent_jose p_mercado_sj))
+
 
    (is-agent agent_maria)
    (at agent_maria bike_alfandega)
@@ -86,6 +97,12 @@
    (not(have-bike agent_maria bike6))
    (not(have-bike agent_maria bike7))
    (not(have-bike agent_maria bike8))
+   (not(visited agent_maria p_banco_brasil)) 
+   (not(visited agent_maria p_paco_alfandega))
+   (not(visited agent_maria p_praca_republica))
+   (not(visited agent_maria p_igreja_nsrp)) 
+   (not(visited agent_maria p_mercado_sj))
+
 
    (is-estacao bike_alfandega)
    (is-estacao bike_praca_diario)
