@@ -1,18 +1,18 @@
 (define (domain multimodal)
   (:requirements :strips)
   (:predicates
-   (at ?what ?square)
-   (adj ?square-1 ?square-2)
+   (at ?what ?place)
+   (adj ?place-1 ?place-2)
    (have ?who ?what)
    (is-agent ?who)
    (is-agent-blocked ?who);;quando ele vai para uma estão para a outra e fica parado
    (by-foot ?who);; está a andar a pé 
-   (is-estacao ?square) ;; se é uma estação o local 
-   (is-ponto-turistico ?square);; se é um ponto turistico 
+   (is-estacao ?place) ;; se é uma estação o local 
+   (is-ponto-turistico ?place);; se é um ponto turistico 
    (is-bike ?which);; se é uma bike 
-   (visited ?who ?square) ;; se visitou aquele local
+   (visited ?who ?place) ;; se visitou aquele local
    (have-bike ?who ?which);; qual a bike que ele pegou na estação
-   (have-estacao-bike ?square ?which) ;;quais bikes a estação tem  
+   (have-estacao-bike ?place ?which) ;;quais bikes a estação tem  
   )
 
   (:action caminhar
